@@ -1,0 +1,16 @@
+body, html{margin:0;padding:0;font-family:Arial,sans-serif;background:#f4f4f4;color:#333;}
+header{background:#007BFF;color:white;text-align:center;padding:20px;}
+h1,h2{margin:0;padding:10px 0;}
+.container{width:95%;max-width:1000px;margin:20px auto;}
+nav{text-align:center;margin-bottom:20px;}
+nav button{margin:5px;padding:10px 20px;border:none;border-radius:5px;cursor:pointer;background:#007BFF;color:white;}
+nav button.active{background:#0056b3;}
+.tool{background:white;padding:20px;margin:20px 0;border-radius:10px;box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+input,textarea,button,select{width:100%;padding:10px;margin:10px 0;border-radius:5px;border:1px solid #ccc;}
+button{background:#007BFF;color:white;cursor:pointer;}
+button:hover{opacity:0.9;}
+#darkToggle{position:fixed;top:10px;right:10px;padding:10px;background:#333;color:white;border-radius:5px;cursor:pointer;z-index:1000;}
+.dark body{background:#121212;color:white;}
+.dark .tool{background:#1E1E1E;color:white;}
+.dark nav button{background:#00BFFF;color:white;}
+.dark nav button.active{background:#0099CC;}
