@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="EasyConvertor is a free all-in-one online tool hub. Compress images, convert PDFs & Word, JPG & PDF, generate text, Instagram captions, QR codes, and more." />
+<title>EasyConvertor Free Tools</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+<h1>EasyConvertor Free Tools</h1>
+<p>All tools are free and work directly in your browser</p>
+</header>
+
+<button id="darkToggle">Toggle Dark Mode</button>
+
+<nav>
+<button class="tabButton active" onclick="showTab('image')">Image Compressor</button>
+<button class="tabButton" onclick="showTab('pdfword')">PDF → Word</button>
+<button class="tabButton" onclick="showTab('wordpdf')">Word → PDF</button>
+<button class="tabButton" onclick="showTab('textgen')">Text Generator</button>
+<button class="tabButton" onclick="showTab('igcap')">Instagram Caption</button>
+<button class="tabButton" onclick="showTab('pdfjpg')">PDF → JPG</button>
+<button class="tabButton" onclick="showTab('jpgpdf')">JPG → PDF</button>
+<button class="tabButton" onclick="showTab('pdfmerge')">PDF Merge/Split</button>
+<button class="tabButton" onclick="showTab('qrcode')">QR Code Generator</button>
+<button class="tabButton" onclick="showTab('blog')">Blog / FAQ</button>
+</nav>
+
+<div class="container">
+<div class="tool tabContent" id="image">
+<h2>Image Compressor</h2>
+<input type="file" id="imgInput" accept="image/*" multiple />
+<label>Compression Quality: <span id="imgQualityVal">70%</span></label>
+<input type="range" id="imgQuality" min="10" max="100" value="70" oninput="document.getElementById('imgQualityVal').innerText=this.value+'%'" />
+<button onclick="compressImage()">Compress & Download ZIP</button>
+</div>
+
+<div class="tool tabContent" id="pdfword" style="display:none">
+<h2>PDF → Word</h2>
+<input type="file" id="pdfInput" accept="application/pdf" multiple />
+<button onclick="pdfToWord()">Convert & Download ZIP</button>
+</div>
+
+<div class="tool tabContent" id="wordpdf" style="display:none">
+<h2>Word → PDF</h2>
+<input type="file" id="wordInput" accept=".doc,.docx,.txt" multiple />
+<button onclick="wordToPDF()">Convert & Download ZIP</button>
+</div>
+
+<div class="tool tabContent" id="textgen" style="display:none">
+<h2>Text Generator</h2>
+<textarea id="txtPrompt" placeholder="Enter topic or keyword..."></textarea>
+<button onclick="generateText()">Generate Text</button>
+<p id="txtOutput"></p>
+</div>
+
+<div class="tool tabContent" id="igcap" style="display:none">
+<h2>Instagram Caption Generator</h2>
+<textarea id="igPrompt" placeholder="Enter post topic or theme..."></textarea>
+<button onclick="generateCaption()">Generate Caption</button>
+<p id="igOutput"></p>
+</div>
+
+<div class="tool tabContent" id="pdfjpg" style="display:none">
+<h2>PDF → JPG</h2>
+<input type="file" id="pdfToImgInput" accept="application/pdf" multiple />
+<button onclick="pdfToJPG()">Convert & Download ZIP</button>
+</div>
+
+<div class="tool tabContent" id="jpgpdf" style="display:none">
+<h2>JPG → PDF</h2>
+<input type="file" id="jpgToPdfInput" accept="image/*" multiple />
+<button onclick="jpgToPDF()">Convert & Download ZIP</button>
+</div>
+
+<div class="tool tabContent" id="pdfmerge" style="display:none">
+<h2>PDF Merge / Split</h2>
+<input type="file" id="pdfMergeInput" accept="application/pdf" multiple />
+<button onclick="mergePDF()">Merge / Split Demo</button>
+</div>
+
+<div class="tool tabContent" id="qrcode" style="display:none">
+<h2>QR Code Generator</h2>
+<input type="text" id="qrText" placeholder="Enter text or URL..." />
+<button onclick="generateQR()">Generate QR Code</button>
+<div id="qrOutput"></div>
+</div>
+
+<div class="tool tabContent" id="blog" style="display:none">
+<h2>Blog / FAQ</h2>
+<p>Welcome to EasyConvertor Blog / FAQ section. Here you can add guides, tutorials, trending tools info, tips & tricks for PDF, Images, Text, Instagram captions, and more.</p>
+</div>
+
+<script src="script.js"></script>
+</div>
+
+<script>
+function showTab(tabId){
+var tabs=document.getElementsByClassName('tabContent');
+for(var i=0;i<tabs.length;i++){tabs[i].style.display='none';}
+document.getElementById(tabId).style.display='block';
+var btns=document.getElementsByClassName('tabButton');
+for(var i=0;i<btns.length;i++){btns[i].classList.remove('active');}
+event.currentTarget.classList.add('active');
+}
+document.getElementById('darkToggle').onclick=function(){
+document.body.classList.toggle('dark');
+};
+</script>
+
+</body>
+</html>
