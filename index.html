@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EasyConvertor - Free Online Tools</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>EasyConvertor</h1>
+    <p>All-in-one Free Online Tools</p>
+  </header>
+
+  <nav>
+    <button class="tab-btn" onclick="openTab('pdf')">PDF Tools</button>
+    <button class="tab-btn" onclick="openTab('image')">Image Tools</button>
+    <button class="tab-btn" onclick="openTab('text')">Text Tools</button>
+    <button class="tab-btn" onclick="openTab('extra')">Extra Tools</button>
+  </nav>
+
+  <main>
+    <!-- PDF Tools -->
+    <section id="pdf" class="tab-content">
+      <h2>PDF Tools</h2>
+      <ul>
+        <li>PDF to Word Converter</li>
+        <li>Word to PDF Converter</li>
+        <li>Merge PDF</li>
+        <li>Split PDF</li>
+        <li>PDF to JPG</li>
+        <li>JPG to PDF</li>
+        <li>Compress PDF</li>
+      </ul>
+    </section>
+
+    <!-- Image Tools -->
+    <section id="image" class="tab-content" style="display:none">
+      <h2>Image Tools</h2>
+      <ul>
+        <li>Image Compressor</li>
+        <li>Resize Image</li>
+        <li>Convert PNG ↔ JPG ↔ WebP</li>
+      </ul>
+    </section>
+
+    <!-- Text Tools -->
+    <section id="text" class="tab-content" style="display:none">
+      <h2>Text Tools</h2>
+      <ul>
+        <li>Text Generator</li>
+        <li>Instagram Caption Generator</li>
+        <li>Hashtag Generator</li>
+        <li>Random Quote Generator</li>
+      </ul>
+    </section>
+
+    <!-- Extra Tools -->
+    <section id="extra" class="tab-content" style="display:none">
+      <h2>Extra / Optional Tools</h2>
+      <ul>
+        <li>QR Code Generator</li>
+        <li>ZIP File Extractor</li>
+        <li>JSON Formatter</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 EasyConvertor | All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
